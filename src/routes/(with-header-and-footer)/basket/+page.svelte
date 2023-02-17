@@ -61,8 +61,8 @@
 											</h4>
 											<p class="ml-4 text-sm font-medium text-gray-900">€{item.product.price}</p>
 										</div>
-										<p class="mt-1 text-sm text-gray-500">Mint</p>
-										<p class="mt-1 text-sm text-gray-500">Medium</p>
+										<!-- <p class="mt-1 text-sm text-gray-500">Mint</p>
+										<p class="mt-1 text-sm text-gray-500">Medium</p> -->
 									</div>
 
 									<div class="mt-4 flex flex-1 items-end justify-between">
@@ -124,7 +124,7 @@
 					<div class="mt-6 text-center text-sm">
 						<p>
 							or
-							<a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">
+							<a href="/products" class="font-medium text-indigo-600 hover:text-indigo-500">
 								Continue Shopping
 								<span aria-hidden="true"> &rarr;</span>
 							</a>
