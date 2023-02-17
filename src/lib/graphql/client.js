@@ -3,7 +3,7 @@ import { HttpLink, ApolloClient, InMemoryCache } from '@apollo/client/core';
 const GRAPHQL_HTTP_HOST = import.meta.env.VITE_GRAPHQL_HTTP_HOST;
 
 const httpLink = new HttpLink({
-	uri: `${GRAPHQL_HTTP_HOST}/graphql`,
+	uri: `${GRAPHQL_HTTP_HOST}/graphql/`,
 	credentials: 'include'
 });
 

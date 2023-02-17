@@ -1,10 +1,19 @@
 import { gql } from '@apollo/client/core';
 
-export const GET_MY_TODOS = gql`
-	query getMyTodos {
-		todos {
+export const GET_PRODUCTS = gql`
+	query getProducts {
+		products {
 			id
-			title
+			image {
+				height
+				name
+				path
+				size
+				url
+				width
+			}
+			name
+			price
 		}
 	}
 `;

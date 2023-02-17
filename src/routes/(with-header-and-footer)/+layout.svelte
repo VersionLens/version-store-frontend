@@ -3,7 +3,7 @@
 
 	import { setClient } from 'svelte-apollo';
 	import client from '$lib/graphql/client';
-	import Navigation from '../../lib/components/Navigation.svelte';
+	// import Navigation from '../../lib/components/Navigation.svelte';
 
 	setClient(client);
 </script>
