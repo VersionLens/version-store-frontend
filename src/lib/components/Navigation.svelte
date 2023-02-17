@@ -84,9 +84,8 @@
 						<!-- Mobile menu and search (lg-) -->
 						<div class="flex flex-1 items-center lg:hidden">
 							<!-- Mobile menu toggle, controls the 'mobileMenuOpen' state. -->
-							<button type="button" class="-ml-2 p-2 text-white">
+							<!-- <button type="button" class="-ml-2 p-2 text-white">
 								<span class="sr-only">Open menu</span>
-								<!-- Heroicon name: outline/bars-3 -->
 								<svg
 									class="h-6 w-6"
 									xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +101,7 @@
 										d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
 									/>
 								</svg>
-							</button>
+							</button> -->
 
 							<!-- Search -->
 							<!-- <a href="#" class="ml-2 p-2 text-white">

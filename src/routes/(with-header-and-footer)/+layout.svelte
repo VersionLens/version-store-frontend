@@ -24,35 +24,10 @@
   ```
 -->
 <div class="bg-white">
-	<!--
-	  Mobile menu
-  
-	  Off-canvas menu for mobile, show/hide based on off-canvas menu state.
-	-->
-	<div class="relative z-40 lg:hidden" role="dialog" aria-modal="true">
-		<!--
-		Off-canvas menu backdrop, show/hide based on off-canvas menu state.
-  
-		Entering: "transition-opacity ease-linear duration-300"
-		  From: "opacity-0"
-		  To: "opacity-100"
-		Leaving: "transition-opacity ease-linear duration-300"
-		  From: "opacity-100"
-		  To: "opacity-0"
-	  -->
+	<!-- <div class="relative z-40 lg:hidden" role="dialog" aria-modal="true">
 		<div class="fixed inset-0 bg-black bg-opacity-25" />
 
 		<div class="fixed inset-0 z-40 flex">
-			<!--
-		  Off-canvas menu, show/hide based on off-canvas menu state.
-  
-		  Entering: "transition ease-in-out duration-300 transform"
-			From: "-translate-x-full"
-			To: "translate-x-0"
-		  Leaving: "transition ease-in-out duration-300 transform"
-			From: "translate-x-0"
-			To: "-translate-x-full"
-		-->
 			<div class="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl">
 				<div class="flex px-4 pt-5 pb-2">
 					<button
@@ -60,7 +35,6 @@
 						class="-m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-400"
 					>
 						<span class="sr-only">Close menu</span>
-						<!-- Heroicon name: outline/x-mark -->
 						<svg
 							class="h-6 w-6"
 							xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +61,6 @@
 				</div>
 
 				<div class="space-y-6 border-t border-gray-200 py-6 px-4">
-					<!-- Currency selector -->
 					<form>
 						<div class="inline-block">
 							<label for="mobile-currency" class="sr-only">Currency</label>
@@ -110,7 +83,6 @@
 									<option>GBP</option>
 								</select>
 								<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center">
-									<!-- Heroicon name: mini/chevron-down -->
 									<svg
 										class="h-5 w-5 text-gray-500"
 										xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +103,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<slot />
 
