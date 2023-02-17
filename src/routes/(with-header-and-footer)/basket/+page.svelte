@@ -36,7 +36,7 @@
 		{:else if $basket.error}
 			<h1>Error: {$basket.error.message}</h1>
 		{:else}
-			<form class="mt-12">
+			<div class="mt-12">
 				<section aria-labelledby="cart-heading">
 					<h2 id="cart-heading" class="sr-only">Items in your shopping cart</h2>
 
@@ -115,7 +115,7 @@
 
 					<div class="mt-10">
 						<button
-							type="submit"
+							on:click={() => alert('This is just a demo')}
 							class="w-full rounded-md border border-transparent bg-indigo-600 py-3 px-4 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
 							>Checkout</button
 						>
@@ -131,7 +131,7 @@
 						</p>
 					</div>
 				</section>
-			</form>
+			</div>
 		{/if}
 	</div>
 </div>
