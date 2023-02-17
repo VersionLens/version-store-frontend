@@ -1,6 +1,11 @@
 <script>
 	import logoLight from '$lib/assets/logo-light.svg';
 	import logoDark from '$lib/assets/logo-dark.svg';
+	import { query } from 'svelte-apollo';
+	import { GET_BASKET } from '$lib/graphql/queries';
+
+	const GRAPHQL_HTTP_HOST = import.meta.env.VITE_GRAPHQL_HTTP_HOST;
+	$: basket = query(GET_BASKET);
 
 	export let lightTheme = true;
 </script>
@@ -171,7 +176,13 @@
 										</svg>
 										<span
 											class="ml-2 text-sm font-medium {lightTheme ? 'text-white' : 'text-black'}"
-											>0</span
+											>{#if $basket.loading}
+												...
+											{:else if $basket.error}
+												<h1>Error: {$basket.error.message}</h1>
+											{:else}
+												{$basket.data.basket.items.length}
+											{/if}</span
 										>
 										<span class="sr-only">items in cart, view bag</span>
 									</a>

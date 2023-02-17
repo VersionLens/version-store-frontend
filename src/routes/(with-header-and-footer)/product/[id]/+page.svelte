@@ -4,6 +4,7 @@
 	import { query } from 'svelte-apollo';
 	import Navigation from '$lib/components/Navigation.svelte';
 	import { GET_PRODUCT } from '$lib/graphql/queries';
+	import AddToBasketButton from '$lib/components/basket/AddToBasketButton.svelte';
 
 	const GRAPHQL_HTTP_HOST = import.meta.env.VITE_GRAPHQL_HTTP_HOST;
 	const productId = $page.params.id;
@@ -117,8 +118,8 @@
 						<!-- <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8"> -->
 						<img
 							src="{GRAPHQL_HTTP_HOST}{$product.data.product.image.url}"
-							alt="Back of women&#039;s Basic Tee in black."
-							class="lg:col-span-2 lg:row-span-2 rounded-lg"
+							alt=""
+							class="lg:col-span-2 lg:row-span-2 rounded-lg object-cover"
 						/>
 						<!-- </div> -->
 					</div>
@@ -261,11 +262,7 @@
 								</fieldset>
 							</div> -->
 
-							<button
-								type="submit"
-								class="mt-8 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 py-3 px-8 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-								>Add #{productId} to cart</button
-							>
+							<AddToBasketButton {productId} />
 						</form>
 
 						<!-- Product details -->

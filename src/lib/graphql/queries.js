@@ -35,3 +35,20 @@ export const GET_PRODUCT = gql`
 		}
 	}
 `;
+
+export const GET_BASKET = gql`
+	query getBasket {
+		basket {
+			items {
+				product {
+					id
+					image {
+						url
+					}
+					name
+					price
+				}
+			}
+		}
+	}
+`;
