@@ -2,10 +2,7 @@
 	import sign from '$lib/assets/sign.jpg';
 
 	import { query } from 'svelte-apollo';
-	import { GET_MY_TODOS } from '$lib/graphql/queries';
 	import Navigation from '$lib/components/Navigation.svelte';
-
-	const todos = query(GET_MY_TODOS);
 </script>
 
 <div class="relative bg-gray-900">
