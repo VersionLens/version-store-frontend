@@ -157,7 +157,7 @@
 
 								<!-- Cart -->
 								<div class="ml-4 flow-root lg:ml-8">
-									<a href="#" class="group -m-2 flex items-center p-2">
+									<a href="/basket" class="group -m-2 flex items-center p-2">
 										<!-- Heroicon name: outline/shopping-bag -->
 										<svg
 											class="h-6 w-6 flex-shrink-0 {lightTheme ? 'text-white' : 'text-black'}"

@@ -40,6 +40,7 @@ export const GET_BASKET = gql`
 	query getBasket {
 		basket {
 			items {
+				id
 				product {
 					id
 					image {
