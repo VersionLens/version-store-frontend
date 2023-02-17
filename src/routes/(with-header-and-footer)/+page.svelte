@@ -223,7 +223,7 @@
 						We've just launched Version Store and can't wait to launch more products to you!
 					</p>
 					<a
-						href="#"
+						href="/products"
 						class="mt-8 block w-full rounded-md border border-transparent bg-white py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto"
 						>See our first products</a
 					>
