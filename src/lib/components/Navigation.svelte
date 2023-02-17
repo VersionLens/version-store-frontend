@@ -70,7 +70,7 @@
 					<div class="flex h-16 items-center justify-between">
 						<!-- Logo (lg+) -->
 						<div class="hidden lg:flex lg:flex-1 lg:items-center">
-							<a href="#">
+							<a href="/">
 								<span class="sr-only">Verison Store</span>
 								<img class="h-8 w-auto" src={lightTheme ? logoLight : logoDark} alt="" />
 							</a>
@@ -121,7 +121,7 @@
 						</div>
 
 						<!-- Logo (lg-) -->
-						<a href="#" class="lg:hidden">
+						<a href="/" class="lg:hidden">
 							<span class="sr-only">Version Store</span>
 							<img src={lightTheme ? logoLight : logoDark} alt="" class="h-8 w-auto" />
 						</a>
