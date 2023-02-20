@@ -126,7 +126,7 @@
 
 					<div class="mt-8 lg:col-span-5">
 						<form>
-							<div>
+							<!-- <div>
 								<h2 class="text-sm font-medium text-gray-900">Color</h2>
 
 								<fieldset class="mt-2">
@@ -167,7 +167,7 @@
 										</label>
 									</div>
 								</fieldset>
-							</div>
+							</div> -->
 
 							<!-- <div class="mt-8">
 								<div class="flex items-center justify-between">
