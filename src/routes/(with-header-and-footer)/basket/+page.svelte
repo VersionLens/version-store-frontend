@@ -3,6 +3,7 @@
 	import { query, mutation } from 'svelte-apollo';
 	import { GET_BASKET } from '$lib/graphql/queries';
 	import { REMOVE_PRODUCT_FROM_BASKET } from '$lib/graphql/mutations';
+	import * as R from 'ramda';
 
 	const removeFromBasketMutation = mutation(REMOVE_PRODUCT_FROM_BASKET);
 
@@ -20,6 +21,25 @@
 		return $basket.data.basket.items
 			.map((item) => parseInt(item.product.price))
 			.reduce((partialSum, price) => partialSum + price, 0);
+	};
+
+	const getProducts = () => {
+		// Returns an object with the following structure
+		// {
+		// 	"product-id": [
+		// 		{item...},
+		// 		{item...}
+		// 	],
+		// 	"another-product-id": ...
+		// }
+		const items = $basket?.data?.basket?.items;
+		if (!items) return [];
+		console.log(items);
+
+		const byProductId = R.groupBy(({ product }) => product.id);
+		const products = byProductId(items);
+		console.log(products);
+		return products;
 	};
 </script>
 
@@ -41,11 +61,11 @@
 					<h2 id="cart-heading" class="sr-only">Items in your shopping cart</h2>
 
 					<ul role="list" class="divide-y divide-gray-200 border-t border-b border-gray-200">
-						{#each $basket.data.basket.items as item}
+						{#each Object.entries(getProducts()) as [productId, items]}
 							<li class="flex py-6">
 								<div class="flex-shrink-0">
 									<img
-										src="{GRAPHQL_HTTP_HOST}{item.product.image.url}"
+										src="{GRAPHQL_HTTP_HOST}{items[0].product.image.url}"
 										alt=""
 										class="h-24 w-24 rounded-md object-cover object-center sm:h-32 sm:w-32"
 									/>
@@ -56,13 +76,33 @@
 										<div class="flex justify-between">
 											<h4 class="text-sm">
 												<a href="#" class="font-medium text-gray-700 hover:text-gray-800"
-													>{item.product.name}</a
+													>{items[0].product.name}</a
 												>
 											</h4>
-											<p class="ml-4 text-sm font-medium text-gray-900">€{item.product.price}</p>
+											<p class="ml-4 text-sm font-medium text-gray-900">
+												€{items[0].product.price}
+											</p>
 										</div>
 										<!-- <p class="mt-1 text-sm text-gray-500">Mint</p>
 										<p class="mt-1 text-sm text-gray-500">Medium</p> -->
+									</div>
+
+									<div class="mt-4 flex items-center sm:mt-0 sm:block">
+										<label for="quantity-0" class="sr-only">Quantity, Nomad Tumbler</label>
+										<select
+											id="quantity-0"
+											name="quantity-0"
+											class="block max-w-full rounded-md border border-gray-300 py-1.5 text-left text-base font-medium leading-5 text-gray-700 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-1 focus:ring-indigo-500 sm:text-sm"
+										>
+											{#each Array(Math.max(items.length, 9)) as _, i}
+												<option selected={i + 1 === items.length} value={i + 1}>{i + 1}</option>
+											{/each}
+										</select>
+
+										<button
+											type="button"
+											class="ml-4 text-sm font-medium text-indigo-600 hover:text-indigo-500 sm:ml-0 sm:mt-3"
+										/>
 									</div>
 
 									<div class="mt-4 flex flex-1 items-end justify-between">
