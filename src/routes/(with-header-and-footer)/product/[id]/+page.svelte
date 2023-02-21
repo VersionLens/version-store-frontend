@@ -22,7 +22,7 @@
 		<div class="pt-6 pb-16 sm:pb-24">
 			<div class="mx-auto mt-8 max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
 				<div class="lg:grid lg:auto-rows-min lg:grid-cols-12 lg:gap-x-8">
-					<div class="lg:col-span-5 lg:col-start-8">
+					<div class="lg:col-span-5 lg:col-start-1">
 						<div class="flex justify-between">
 							<h1 class="text-xl font-medium text-gray-900">{$product.data.product.name}</h1>
 							<p class="text-xl font-medium text-gray-900">€{$product.data.product.price}</p>
@@ -112,14 +112,16 @@
 					</div>
 
 					<!-- Image gallery -->
-					<div class="mt-8 lg:col-span-7 lg:col-start-1 lg:row-span-3 lg:row-start-1 lg:mt-0">
+					<div
+						class="relative mt-8 lg:col-span-7 lg:col-start-6 lg:row-span-3 lg:row-start-1 lg:mt-0"
+					>
 						<h2 class="sr-only">Images</h2>
 
 						<!-- <div class="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-3 lg:gap-8"> -->
 						<img
 							src="{GRAPHQL_HTTP_HOST}{$product.data.product.image.url}"
 							alt=""
-							class="lg:col-span-2 lg:row-span-2 rounded-lg object-cover"
+							class="lg:col-span-2 lg:row-span-2 rounded-lg object-cover lg:absolute lg:right-0"
 						/>
 						<!-- </div> -->
 					</div>
