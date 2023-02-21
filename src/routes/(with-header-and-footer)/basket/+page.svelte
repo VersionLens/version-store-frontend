@@ -7,9 +7,9 @@
 
 	const removeFromBasketMutation = mutation(REMOVE_PRODUCT_FROM_BASKET);
 
-	const removeFromBasket = async (itemId) => {
+	const removeFromBasket = async (productId) => {
 		await removeFromBasketMutation({
-			variables: { itemId: parseInt(itemId) }
+			variables: { productId: parseInt(productId) }
 		});
 		location.reload();
 	};
@@ -123,7 +123,7 @@
 										</p>
 										<div class="ml-4">
 											<button
-												on:click={() => removeFromBasket(item.id)}
+												on:click={() => removeFromBasket(productId)}
 												type="button"
 												class="text-sm font-medium text-indigo-600 hover:text-indigo-500"
 											>
