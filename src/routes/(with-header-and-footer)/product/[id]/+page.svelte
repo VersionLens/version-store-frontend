@@ -298,6 +298,101 @@
 							</div>
 						</div>
 
+						<!-- Reviews -->
+						<div class="mt-8 border-t border-gray-200 pt-8">
+							<div class="-my-12 divide-y divide-gray-200">
+								{#each $product.data.product.reviews as review}
+									<div class="py-12">
+										<div class="flex items-center">
+											<div
+												class="h-8 w-8 rounded-full bg-gray-300 flex text-center items-center justify-center mr-4 text-white text-lg"
+											>
+												<span class="sr-only">Open user menu</span>
+												<span>{review.user.username.charAt(0).toUpperCase()}</span>
+											</div>
+											<div class="ml-4">
+												<h4 class="text-sm font-bold text-gray-900">{review.user.username}</h4>
+												<div class="mt-1 flex items-center">
+													<!-- Active: "text-yellow-400", Default: "text-gray-300" -->
+													<svg
+														class="text-yellow-400 h-5 w-5 flex-shrink-0"
+														viewBox="0 0 20 20"
+														fill="currentColor"
+														aria-hidden="true"
+													>
+														<path
+															fill-rule="evenodd"
+															d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+															clip-rule="evenodd"
+														/>
+													</svg>
+
+													<svg
+														class="text-yellow-400 h-5 w-5 flex-shrink-0"
+														viewBox="0 0 20 20"
+														fill="currentColor"
+														aria-hidden="true"
+													>
+														<path
+															fill-rule="evenodd"
+															d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+															clip-rule="evenodd"
+														/>
+													</svg>
+
+													<svg
+														class="text-yellow-400 h-5 w-5 flex-shrink-0"
+														viewBox="0 0 20 20"
+														fill="currentColor"
+														aria-hidden="true"
+													>
+														<path
+															fill-rule="evenodd"
+															d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+															clip-rule="evenodd"
+														/>
+													</svg>
+
+													<svg
+														class="text-yellow-400 h-5 w-5 flex-shrink-0"
+														viewBox="0 0 20 20"
+														fill="currentColor"
+														aria-hidden="true"
+													>
+														<path
+															fill-rule="evenodd"
+															d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+															clip-rule="evenodd"
+														/>
+													</svg>
+
+													<svg
+														class="text-yellow-400 h-5 w-5 flex-shrink-0"
+														viewBox="0 0 20 20"
+														fill="currentColor"
+														aria-hidden="true"
+													>
+														<path
+															fill-rule="evenodd"
+															d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+															clip-rule="evenodd"
+														/>
+													</svg>
+												</div>
+												<p class="sr-only">5 out of 5 stars</p>
+											</div>
+										</div>
+
+										<div class="mt-4 space-y-6 text-base italic text-gray-600">
+											<p>
+												{review.comment}
+											</p>
+										</div>
+									</div>
+								{/each}
+							</div>
+						</div>
+
 						<!-- Policies -->
 						<section aria-labelledby="policies-heading" class="mt-10">
 							<h2 id="policies-heading" class="sr-only">Our Policies</h2>

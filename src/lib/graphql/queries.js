@@ -32,6 +32,12 @@ export const GET_PRODUCT = gql`
 				url
 				width
 			}
+			reviews {
+				user {
+					username
+				}
+				comment
+			}
 		}
 	}
 `;
