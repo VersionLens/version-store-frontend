@@ -81,11 +81,14 @@
 							</a>
 						</div>
 
+						<!-- Categories -->
 						<div class="hidden lg:block mt-2">
 							<div class="-mb-px flex space-x-8 px-4" aria-orientation="horizontal" role="tablist">
 								<button
 									id="tabs-1-tab-1"
-									class="text-gray-900 border-transparent flex-1 whitespace-nowrap border-b-2 py-4 px-1 text-base font-medium"
+									class="{lightTheme
+										? 'text-white'
+										: 'text-gray-900'} border-transparent flex-1 whitespace-nowrap border-b-2 py-4 px-1 text-base font-medium"
 									aria-controls="tabs-1-panel-1"
 									role="tab"
 									type="button">Clothing</button
@@ -93,7 +96,9 @@
 
 								<button
 									id="tabs-1-tab-2"
-									class="text-gray-900 border-transparent flex-1 whitespace-nowrap border-b-2 py-4 px-1 text-base font-medium"
+									class="{lightTheme
+										? 'text-white'
+										: 'text-gray-900'} border-transparent flex-1 whitespace-nowrap border-b-2 py-4 px-1 text-base font-medium"
 									aria-controls="tabs-1-panel-2"
 									role="tab"
 									type="button">Accessories</button
@@ -101,7 +106,9 @@
 
 								<button
 									id="tabs-1-tab-2"
-									class="text-gray-900 border-transparent flex-1 whitespace-nowrap border-b-2 py-4 px-1 text-base font-medium"
+									class="{lightTheme
+										? 'text-white'
+										: 'text-gray-900'} border-transparent flex-1 whitespace-nowrap border-b-2 py-4 px-1 text-base font-medium"
 									aria-controls="tabs-1-panel-2"
 									role="tab"
 									type="button">Bathroom & Kitchen</button
@@ -109,7 +116,9 @@
 
 								<button
 									id="tabs-1-tab-2"
-									class="text-gray-900 border-transparent flex-1 whitespace-nowrap border-b-2 py-4 px-1 text-base font-medium"
+									class="{lightTheme
+										? 'text-white'
+										: 'text-gray-900'} border-transparent flex-1 whitespace-nowrap border-b-2 py-4 px-1 text-base font-medium"
 									aria-controls="tabs-1-panel-2"
 									role="tab"
 									type="button">Electronics</button
