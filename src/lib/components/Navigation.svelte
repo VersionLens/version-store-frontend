@@ -2,10 +2,11 @@
 	import logoLight from '$lib/assets/logo-light.svg';
 	import logoDark from '$lib/assets/logo-dark.svg';
 	import { query } from 'svelte-apollo';
-	import { GET_BASKET } from '$lib/graphql/queries';
+	import { GET_BASKET, GET_CATEGORIES } from '$lib/graphql/queries';
 
 	const GRAPHQL_HTTP_HOST = import.meta.env.VITE_GRAPHQL_HTTP_HOST;
 	$: basket = query(GET_BASKET);
+	$: categories = query(GET_CATEGORIES);
 
 	export let lightTheme = true;
 </script>
@@ -82,49 +83,33 @@
 						</div>
 
 						<!-- Categories -->
-						<div class="hidden lg:block mt-2">
-							<div class="-mb-px flex space-x-8 px-4" aria-orientation="horizontal" role="tablist">
-								<button
-									id="tabs-1-tab-1"
-									class="{lightTheme
-										? 'text-white'
-										: 'text-gray-900'} border-transparent flex-1 whitespace-nowrap border-b-2 py-4 px-1 text-base font-medium"
-									aria-controls="tabs-1-panel-1"
-									role="tab"
-									type="button">Clothing</button
-								>
-
-								<button
-									id="tabs-1-tab-2"
-									class="{lightTheme
-										? 'text-white'
-										: 'text-gray-900'} border-transparent flex-1 whitespace-nowrap border-b-2 py-4 px-1 text-base font-medium"
-									aria-controls="tabs-1-panel-2"
-									role="tab"
-									type="button">Accessories</button
-								>
-
-								<button
-									id="tabs-1-tab-2"
-									class="{lightTheme
-										? 'text-white'
-										: 'text-gray-900'} border-transparent flex-1 whitespace-nowrap border-b-2 py-4 px-1 text-base font-medium"
-									aria-controls="tabs-1-panel-2"
-									role="tab"
-									type="button">Bathroom & Kitchen</button
-								>
-
-								<button
-									id="tabs-1-tab-2"
-									class="{lightTheme
-										? 'text-white'
-										: 'text-gray-900'} border-transparent flex-1 whitespace-nowrap border-b-2 py-4 px-1 text-base font-medium"
-									aria-controls="tabs-1-panel-2"
-									role="tab"
-									type="button">Electronics</button
-								>
-							</div>
-						</div>
+						{#if $categories.loading}
+							&nbsp;
+						{:else if $categories.error}
+							<h1>Error: {$categories.error.message}</h1>
+						{:else}
+							{#each $categories.data.categories as category}
+								<div class="hidden lg:block mt-2">
+									<div
+										class="-mb-px flex space-x-8 px-4"
+										aria-orientation="horizontal"
+										role="tablist"
+									>
+										<a href="/category/{category.id}">
+											<button
+												id="tabs-1-tab-1"
+												class="{lightTheme
+													? 'text-white'
+													: 'text-gray-900'} border-transparent flex-1 whitespace-nowrap border-b-2 py-4 px-1 text-base font-medium"
+												aria-controls="tabs-1-panel-1"
+												role="tab"
+												type="button">{category.name}</button
+											>
+										</a>
+									</div>
+								</div>
+							{/each}
+						{/if}
 
 						<!-- Mobile menu and search (lg-) -->
 						<div class="flex flex-1 items-center lg:hidden">

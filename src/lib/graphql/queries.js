@@ -53,3 +53,15 @@ export const GET_BASKET = gql`
 		}
 	}
 `;
+
+export const GET_CATEGORIES = gql`
+	query getCategories {
+		categories {
+			id
+			name
+			products {
+				name
+			}
+		}
+	}
+`;
