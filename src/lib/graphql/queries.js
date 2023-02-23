@@ -65,3 +65,25 @@ export const GET_CATEGORIES = gql`
 		}
 	}
 `;
+
+export const GET_CATEGORY = gql`
+	query getCategory($id: ID!) {
+		category(pk: $id) {
+			id
+			name
+			products {
+				id
+				name
+				price
+				image {
+					height
+					name
+					path
+					size
+					url
+					width
+				}
+			}
+		}
+	}
+`;
