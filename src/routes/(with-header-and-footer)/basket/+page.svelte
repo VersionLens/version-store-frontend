@@ -1,5 +1,6 @@
 <script>
 	import Navigation from '$lib/components/Navigation.svelte';
+	import EmptyBasket from '$lib/components/basket/EmptyBasket.svelte';
 	import { query, mutation } from 'svelte-apollo';
 	import { GET_BASKET } from '$lib/graphql/queries';
 	import { REMOVE_PRODUCT_FROM_BASKET } from '$lib/graphql/mutations';
@@ -55,6 +56,10 @@
 			Loading...
 		{:else if $basket.error}
 			<h1>Error: {$basket.error.message}</h1>
+		{:else if $basket.data.basket.items.length === 0}
+			<div class="mt-10">
+				<EmptyBasket />
+			</div>
 		{:else}
 			<div class="mt-12">
 				<section aria-labelledby="cart-heading">
