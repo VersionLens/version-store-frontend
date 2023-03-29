@@ -4,7 +4,8 @@ WORKDIR /app
 COPY package.json .
 RUN npm install
 
-COPY . ./
+COPY . /app
+RUN mkdir /code
 
 EXPOSE 5173
-CMD [ "npm", "run", "dev", "--", "--host" ]
+CMD [ "/app/docker-entrypoint.sh" ]
