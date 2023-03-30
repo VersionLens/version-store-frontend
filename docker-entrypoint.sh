@@ -5,5 +5,4 @@ if [ -z "$(ls -A /code)" ]; then
 fi
 
 cd /code
-npm install # Unclear why we have to do this again
 exec npm run dev -- --host

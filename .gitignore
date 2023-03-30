@@ -8,3 +8,5 @@ node_modules
 !.env.example
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+yarn.lock # because of differences between arm64 and x64 binaries
+package-lock.json
