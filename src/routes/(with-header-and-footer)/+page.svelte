@@ -17,7 +17,7 @@
 	<div
 		class="relative mx-auto flex max-w-3xl flex-col items-center py-32 px-6 text-center sm:py-64 lg:px-0"
 	>
-		<h1 class="text-4xl font-bold tracking-tight text-white lg:text-6xl">New arrivals are here</h1>
+<h1 class="text-4xl font-bold tracking-tight text-white lg:text-6xl">sup yo</h1>
 		<p class="mt-4 text-xl text-white">
 			We've just started offering our beloved physical version products publically. There's a
 			limited number of items available.
