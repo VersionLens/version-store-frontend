@@ -21,7 +21,7 @@
 			class="text-4xl font-bold tracking-tight text-white lg:text-6xl"
 			data-ai-description="the main heading on the landing page"
 		>
-			New arrivals are here
+hello
 		</h1>
 		<p
 			class="mt-4 text-xl text-white"
