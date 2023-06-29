@@ -18,10 +18,11 @@
 		class="relative mx-auto flex max-w-3xl flex-col items-center py-32 px-6 text-center sm:py-64 lg:px-0"
 	>
 <h1
-  class="text-4xl font-bold tracking-tight text-white lg:text-6xl"
+  class="text-4xl font-bold tracking-tight text-purple-500 lg:text-6xl"
   data-ai-description="the main heading on the landing page"
 >
   Season Sale
+</h1>
 </h1>
 		<p
 			class="mt-4 text-xl text-white"
