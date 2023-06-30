@@ -5,7 +5,7 @@
 	import Navigation from '$lib/components/Navigation.svelte';
 </script>
 
-<div class="relative bg-gradient-to-b from-black to-gray-900">
+<div class="relative bg-gradient-to-b from-green-200 to-green-900">
   <!-- Decorative image and overlay -->
   <div aria-hidden="true" class="absolute inset-0 overflow-hidden">
     <img src={sign} alt="" class="h-full w-full object-cover object-center" />
