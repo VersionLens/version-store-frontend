@@ -6,7 +6,7 @@
 			alt="Your Company"
 		/>
 		<h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">
-			Register an account
+Create an account
 		</h2>
 	</div>
 
