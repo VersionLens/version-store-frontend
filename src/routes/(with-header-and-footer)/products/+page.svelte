@@ -35,7 +35,7 @@
 							/>
 						</div>
 						<h3 class="mt-4 text-sm text-gray-700">{product.name}</h3>
-						<p class="mt-1 text-lg font-medium text-gray-900">€{product.price}</p>
+<p class="mt-1 text-lg font-medium text-green">€{product.price}</p>
 					</a>
 				{/each}
 
