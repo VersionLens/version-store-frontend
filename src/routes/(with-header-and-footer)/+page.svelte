@@ -30,11 +30,11 @@
 			We've just started offering our beloved physical version products publically. There's a
 			limited number of items available.
 		</p>
-		<a
-			href="/products"
-			class="mt-8 inline-block rounded-md border border-transparent bg-white py-3 px-8 text-base font-medium text-gray-900 hover:bg-gray-100"
-			data-ai-description="the main CTA button on the landing page">Shop Version Lens Products</a
-		>
+<a
+href="/products"
+class="mt-8 inline-block rounded-md border border-transparent bg-red-500 py-3 px-8 text-base font-medium text-gray-900 hover:bg-red-700"
+data-ai-description="the main CTA button on the landing page">Shop Version Lens Products</a
+>
 	</div>
 </div>
 
