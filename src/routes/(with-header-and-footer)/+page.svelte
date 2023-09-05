@@ -32,7 +32,7 @@
 		</p>
 <a
 href="/products"
-class="mt-8 inline-block rounded-md border border-transparent bg-red-500 py-3 px-8 text-base font-medium text-gray-900 hover:bg-red-700"
+class="mt-8 inline-block rounded-md border border-transparent bg-purple-200 py-3 px-8 text-base font-medium text-gray-900 hover:bg-purple-400"
 data-ai-description="the main CTA button on the landing page">Shop Version Lens Products</a
 >
 	</div>
