@@ -28,8 +28,9 @@
 <div class="bg-white">
 	<div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:px-0">
 		<h1 class="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-			Shopping Cart
-		</h1>
+Shopping Cart
+</h1>
+<p class="text-center text-xl text-gray-700">Items in cart: {$basket.data.basket.items.length}</p>
 
 		{#if $basket.loading}
 			Loading...
