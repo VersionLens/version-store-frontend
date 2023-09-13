@@ -104,8 +104,10 @@
 					<div>
 						<dl class="space-y-4">
 							<div class="flex items-center justify-between">
-								<dt class="text-base font-medium text-gray-900">Subtotal</dt>
-								<dd class="ml-4 text-base font-medium text-gray-900">€{getTotalAmount()}</dd>
+<dt class="text-base font-medium text-gray-900">Subtotal</dt>
+<dd class="ml-4 text-base font-medium text-gray-900">€{getTotalAmount()}</dd>
+<dt class="text-base font-medium text-gray-900">Number of Items</dt>
+<dd class="ml-4 text-base font-medium text-gray-900">{$basket.data.basket.items.length}</dd>
 							</div>
 						</dl>
 						<p class="mt-1 text-sm text-gray-500">
