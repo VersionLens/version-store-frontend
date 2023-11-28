@@ -33,7 +33,7 @@
 <a
 href="/products"
 class="mt-8 inline-block rounded-md border border-transparent bg-purple-500 py-3 px-8 text-base font-medium text-white hover:bg-purple-700"
-data-ai-description="the main CTA button on the landing page">Shop Version Lens Products</a
+data-ai-description="the main CTA button on the landing page">Insert Coin</a
 >
 	</div>
 </div>
